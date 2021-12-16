@@ -1,3 +1,4 @@
+console.log('Opposed number key is "["')
 //getting all documents needed
 const mainDisplay = document.querySelector(".mainDisplay");
 const actualTask = document.querySelector(".actualTask");
@@ -23,29 +24,16 @@ function numberData(e) {
     actualNumber += e.target.textContent;
     mainDisplay.textContent = actualNumber;
     setActualTask();
-
-    console.log('act ope ' + actualOperator);
-    console.log('act num ' + actualNumber);
-    console.log('next num ' + nextNumber);
-    console.log('act res ' + actualResult);
 }
 
 //after click on operate button get its text and show it on display and save as data
 function operatorData(e) {
     if (actualNumber != '' && nextNumber != '') {
         equals();
-        console.log('act ope ' + actualOperator);
-        console.log('act num ' + actualNumber);
-        console.log('next num ' + nextNumber);
-        console.log('act res ' + actualResult);
     }
     else if (actualNumber != '') {
         nextNumber = actualNumber;
         actualNumber = '';
-        console.log('act ope ' + actualOperator);
-        console.log('act num ' + actualNumber);
-        console.log('next num ' + nextNumber);
-        console.log('act res ' + actualResult);
     }
     actualOperator = e;
     setActualTask();
@@ -78,17 +66,9 @@ function equals(a, b) {
     b = Number(actualNumber);
     if (actualOperator === '+') {
         actualResult = add(a, b);
-        console.log('act ope ' + actualOperator);
-        console.log('act num ' + actualNumber);
-        console.log('next num ' + nextNumber);
-        console.log('act res ' + actualResult);
     }
     else if (actualOperator === '-') {
         actualResult = subtract(a, b);
-        console.log('act ope ' + actualOperator);
-        console.log('act num ' + actualNumber);
-        console.log('next num ' + nextNumber);
-        console.log('act res ' + actualResult);
     }
     else if (actualOperator === '/') {
         if (actualNumber === '0') {
@@ -98,17 +78,9 @@ function equals(a, b) {
         else {
             actualResult = divide(a, b);
         }
-        console.log('act ope ' + actualOperator);
-        console.log('act num ' + actualNumber);
-        console.log('next num ' + nextNumber);
-        console.log('act res ' + actualResult);
     }
     else if (actualOperator === 'x') {
         actualResult = multiply(a, b);
-        console.log('act ope ' + actualOperator);
-        console.log('act num ' + actualNumber);
-        console.log('next num ' + nextNumber);
-        console.log('act res ' + actualResult);
     }
     setActualResult();
     setActualTask();
@@ -214,6 +186,7 @@ function decimalNumber() {
     }
 }
 
+//function which makes keys usable
 function keyUse(e) {
     if (e.key >= 0 && e.key <= 9) {
         actualNumber += e.key;
@@ -227,3 +200,9 @@ function keyUse(e) {
     if (e.key === '.') decimalNumber()
     if (e.key === '[') opposedNumber()
 }
+
+//tester 
+// console.log('act ope ' + actualOperator);
+// console.log('act num ' + actualNumber);
+// console.log('next num ' + nextNumber);
+// console.log('act res ' + actualResult);
