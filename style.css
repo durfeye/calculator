@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+.calcContainer {
+    width: 19em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 2em;
+    background: #616161;
+}
+.calcHead {
+    display: flex;
+    width: 17.9em;
+    overflow-wrap: break-word;
+    background: white;
+    margin: 0.25em 0 0.5em 0;
+    padding: 0.25em 0.5em 0 0.5em;  
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: right;
+}
+.calcHead .actualTask {
+    min-height: 1.5em;
+}
+.calcHead .mainDisplay {
+    font-size: 2em;
+    min-height: 1.5em;
+}
+.calcBody {
+    display: flex;
+    gap: 0.5em;
+}
+.calcHead, .calcBody {
+    display: flex;
+    flex-direction: column;
+}
+.calcBody .calcRow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+.calcBody .calcRow button {
+    height: 5em;
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #DFDFDF;
+}
+.calcBody .calcRow button:active {
+    background: #909090;
+}
+.calcBody .calcRow .operateButtons {
+    background: #B6B6B6;
+}
+.calcBody .calcRow .resetButton {
+    background: #FFFD6A;
+}
+.calcBody .calcRow .resetButton:active {
+    background: #fffb21;
+}
+.calcBody .calcRow .deleteButton {
+    background: #FF7A6A;
+}
+.calcBody .calcRow .deleteButton:active {
+    background: #f85947;
+}
+
+
+
